@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!--modelVersion 描述这个POM文件是遵从哪个版本的项目描述符。-->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--项目组织唯一的标识符: 域名.公司名.... 域: org为非营利组织, com为商业组织，cn是地域性域名（中国）。 -->
+    <groupId>com.github.rholder</groupId>
+
+    <!--项目的唯一的标识符，实际对应项目的名称，就是项目根目录的名称。-->
+    <artifactId>tb4j-guava-retrying</artifactId>
+
+    <!--指定了myapp项目的当前版本，SNAPSHOT意为快照，说明该项目还处于开发中，是不稳定的版本-->
+    <version>2.0.0</version>
+
+    <!--声明了一个对于用户更为友好的项目名称-->
+    <name>guava-retrying</name>
+
+    <description>This is a small extension to Google's Guava library to allow for the creation of configurable retrying strategies for an arbitrary function call, such as something that talks to a remote service with flaky uptime.</description>
+
+    <!--项目主页-->
+    <url>https://github.com/thebug4j/tb4j-guava-retrying</url>
+
+    <!--开源软件许可：Apache许可证是一个宽松且专业的许可证，相比于其他许可证，软件产品可以自由修改、发布和商用，
+    该许可证还为用户提供专利许可，只须满足以下条件：
+            1、包含一份原始许可声明和版权声明
+            2、如果修改了源代码，包含一份代码修改说明。
+            3、不得使用其原始商标
+     -->
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <!--项目开发者列表-->
+    <developers>
+        <developer>  <!--某个项目开发者的信息-->
+            <id>rholder</id>  <!--SCM里项目开发者的唯一标识符-->
+            <name>Ray Holder</name> <!--项目开发者的全名-->
+        </developer>
+    </developers>
+    <!--scm:+代码clone地址就行，具体是干嘛的不知道-->
+    <scm>
+        <connection>scm:git@github.com:rholder/guava-retrying.git</connection>
+        <developerConnection>scm:git@github.com:rholder/guava-retrying.git</developerConnection>
+        <url>scm:git@github.com:rholder/guava-retrying.git</url>
+    </scm>
+    <dependencies>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.9.5</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>[10.+,)</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>2.0.2</version>
+            <scope>compile</scope>
+        </dependency>
+
+    </dependencies>
+
+
+</project>
