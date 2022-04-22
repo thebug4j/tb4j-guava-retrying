@@ -36,6 +36,16 @@ public class RetryerBuilder<V> {
     private RetryerBuilder() {
     }
 
+    /**
+     *
+     * @param <V>
+     * @return
+     * @Study <V>返回值前加：
+     *      Class<T>中的方法是在new一个对象出来的时候指定的,
+     *      而静态方法其实不需要new一个对象就可以直接使用，
+     *      这个时候用Class.静态方法（会报错无法从静态上下文引用）,那么这个泛型到底是什么类型呢？
+     *      所以只能用 public static <T> void test 这种方式提前定义好泛型
+     */
     public static <V> RetryerBuilder<V> newBuilder() {
         return new RetryerBuilder<V>();
     }
